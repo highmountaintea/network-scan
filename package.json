@@ -1,8 +1,12 @@
 {
   "name": "network-scan",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "simple tool to scan network or subnet for ports",
+  "keywords": ["network", "scan"],
   "main": "index.js",
+  "bin": {
+    "network-scan": "./index.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -10,7 +14,7 @@
     "type": "git",
     "url": "git+https://github.com/johnfliu818/network-scan.git"
   },
-  "author": "",
+  "author": "johnfliu",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/johnfliu818/network-scan/issues"

@@ -1,8 +1,11 @@
 {
   "name": "network-scan",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple tool to scan network or subnet for ports",
-  "keywords": ["network", "scan"],
+  "keywords": [
+    "network",
+    "scan"
+  ],
   "main": "index.js",
   "bin": {
     "network-scan": "./index.js"

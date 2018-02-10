@@ -9,6 +9,7 @@ function scan(ip, port, callback) {
         client.connect(port, ip, function() {
             // console.log('Connected');
             // client.write('Hello, server! Love, Client.');
+            client.destroy();
             callback(undefined, true);
         });
     
@@ -79,6 +80,7 @@ function main() {
     let start = ip2int(ips[0]);
     let end = ip2int(ips[1]);
 
+    console.log('Start scanning, might take ' + Math.floor((end - start) / 300 + 1) + ' minute(s)');
     let scansleft = 0;
     for (let i = start; i <= end; i++) {
         let ip = int2ip(i);

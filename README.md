@@ -11,5 +11,5 @@ The tool is deliberately simple to avoid being used for hacking purposes.
 First `npm install -g network-scan`, then you can run it in terminal or command prompt
 
 ```
-network-scan -n 192.168.100.1-192.168.100.254 ports=http,https,ftp,6379
+network-scan -n 192.168.100.1-192.168.100.254 -p 80,443,6379
 ```

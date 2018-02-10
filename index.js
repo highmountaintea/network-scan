@@ -68,17 +68,10 @@ function int2ip(num) {
 function main() {
     program
         .version('0.1.0')
-        .option('-p, --ports <port list>', 'The list of ports to scan, e.g. -p http,https,21')
+        .option('-p, --ports <port list>', 'The list of ports to scan, e.g. -p 80,443,21')
         .option('-n, --network <network range>', 'The ip range to scan, e.g. -n 192.168.100.1-192.168.100.254')
         .parse(process.argv);
-    if (program.ports == null) {
-        console.log('needs to specify ports to scan');
-        return;
-    }
-    if (program.network == null) {
-        console.log('needs to specify network to scan');
-        return;
-    }
+    if (program.ports == null || program.network == null) program.help();
     let hosts = {};
 
     let ports = program.ports.split(',');
